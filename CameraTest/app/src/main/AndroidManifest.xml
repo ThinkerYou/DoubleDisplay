@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="openapi.ainemo.com.cameratest">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name="com.onzhou.opengles.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <service
+            android:name="soundrecorder.IPCTest.MessengerService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":msg" />
+
+        <activity android:name="soundrecorder.IPCTest.MessengerActivity">
+
+        </activity>
+        <activity android:name=".rxjavatest.RxjavaTestActivity" />
+        <activity android:name="com.onzhou.opengles.camera2.Camera2Activity" />
+        <activity android:name="soundrecorder.sockettest.SocketTestAct" />
+        <activity android:name="soundrecorder.testaudio.TestAudioRecorderActivity" /> <!-- <activity android:name=".MainActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <!-- <activity android:name="com.onzhou.opengles.main.CameraTextureActivity"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity android:name=".GLSurfaceViewActivity" />
+        <activity android:name="display.PresentationActivity" />
+        <activity android:name=".DisplayDemoActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OperaterViewActivity" />
+        <activity android:name=".HandlerActivity" />
+        <activity android:name="soundrecorder.SoundRecorder" />
+
+        <service
+            android:name="com.onzhou.opengles.api.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>
